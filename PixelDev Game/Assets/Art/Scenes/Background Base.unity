@@ -322,14 +322,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8833772824124235867, guid: 56c0de21b4e024a4a9fa26d09b809b69, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1512572599}
   m_SourcePrefab: {fileID: 100100000, guid: 56c0de21b4e024a4a9fa26d09b809b69, type: 3}
 --- !u!114 &271989177 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2986704436763206364, guid: 56c0de21b4e024a4a9fa26d09b809b69, type: 3}
   m_PrefabInstance: {fileID: 271989176}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1512572594}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d1e84ede59e54680a27dc37572fd7b8, type: 3}
@@ -72620,6 +72623,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1512572594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8833772824124235867, guid: 56c0de21b4e024a4a9fa26d09b809b69, type: 3}
+  m_PrefabInstance: {fileID: 271989176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1512572599
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512572594}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.054697037, y: -0.044813395}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.05, y: 3.2}
+    newSize: {x: 4, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8625526, y: 3.110373}
+  m_EdgeRadius: 0
 --- !u!1 &1567846928
 GameObject:
   m_ObjectHideFlags: 0
