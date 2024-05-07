@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Art/Scenes/Background Base.unity
     guid: d95a7771aba1765429c902fe0546d953
+  - enabled: 1
+    path: Assets/Database/PixelDev Database Input.unity
+    guid: 561235e2ed60c2048ac44ce852124be6
+  - enabled: 1
+    path: Assets/MainMenuArt/MainMenu.unity
+    guid: cedfc7a1316917341a79dbd1f039b338
   m_configObjects: {}
