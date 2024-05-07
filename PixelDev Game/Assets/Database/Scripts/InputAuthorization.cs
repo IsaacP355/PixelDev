@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Firebase.Auth;
+using System.Threading.Tasks;
 // https://firebase.google.com/docs/auth/unity/start
 
 public class Authorize : MonoBehaviour
@@ -10,6 +12,7 @@ public class Authorize : MonoBehaviour
 
     public string emailChoice;
     public string passwordChoice;
+    private bool isLogin = false;
 
     public void ReadEmailInput(string choice)
     {
@@ -29,6 +32,7 @@ public class Authorize : MonoBehaviour
         string password = passwordChoice;
         // for testing, see if it correctly displays input
         Debug.Log("Attempting login with email: " + emailChoice + " and password: " + passwordChoice);
+        isLogin = false;
         // authenticate user through firebase using the entered email and password
         FirebaseAuth.DefaultInstance.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(task => {
             if (task.IsCanceled)
@@ -42,11 +46,28 @@ public class Authorize : MonoBehaviour
                 return;
             }
 
-            // authentication was  successful
+            // authentication successful
             AuthResult authResult = task.Result;
             FirebaseUser user = authResult.User;
             Debug.Log("Logged in successfully!: " + user.DisplayName);
+
+            isLogin = true;
+
+            SwitchScene("MainMenu");
         });
+    }
+
+    public async void SwitchScene(string name)
+    {
+        await Task.Delay(5000); // need to wait in order to see if isLogin boolean was true or not from the Login() function
+        if (isLogin)
+        {
+            SceneManager.LoadScene(name);
+        }
+        else
+        {
+            Debug.LogWarning("Invalid login, cannot proceed to game.");
+        }
     }
 
     public void Register()
