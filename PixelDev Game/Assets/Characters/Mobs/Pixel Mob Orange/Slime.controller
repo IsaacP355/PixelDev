@@ -1587,4 +1587,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
+  MaxDistance: 100
   attackRange: 3
