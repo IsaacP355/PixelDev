@@ -25,8 +25,12 @@ public class MainMenu : MonoBehaviour
     {
         SettingsMenu.SetActive(true);
     }
-    public void BackButton()
+    public void AudioBackButton()
     {
         AudioMenu.SetActive(false);
+    }
+    public void SettingsBackButton()
+    {
+        SettingsMenu.SetActive(false);
     }
 }
