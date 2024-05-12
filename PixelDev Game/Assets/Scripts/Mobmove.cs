@@ -4,26 +4,47 @@ using UnityEngine;
 
 public class Mobmove : MonoBehaviour
 {
-    public GameObject player;
+     public GameObject player;
     public float speed;
     public float distanceBetween;
-    private float distance;
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
 
-    // Update is called once per frame
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     void Update()
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
         direction.Normalize();
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        angle -= 180f;
 
-        if(distance < distanceBetween)
+        if (distance < distanceBetween)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+            rb.velocity = direction * speed;
+
+            // Flip character if facing left
+            if (direction.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            // Otherwise, ensure character faces right
+            else
+            {
+                spriteRenderer.flipX = false;
+            }
+        }
+        else
+        {
+            rb.velocity = Vector2.zero; // Stop moving when out of range
         }
 
+        // Rotate the mob to face the player
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 }
