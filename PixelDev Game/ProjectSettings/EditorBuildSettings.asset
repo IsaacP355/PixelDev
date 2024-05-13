@@ -5,14 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Characters/BOSS/Slime/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/MainMenuArt/SettingsMenu.unity
     guid: ec06e9a124cff54468f47c95c20a7737
   - enabled: 1
-    path: Assets/Art/Scenes/Background Base.unity
+    path: Assets/Art/Scenes - Background/Background Base.unity
     guid: d95a7771aba1765429c902fe0546d953
   - enabled: 1
     path: Assets/Database/PixelDev Database Input.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MainMenuArt/MainMenu.unity
     guid: cedfc7a1316917341a79dbd1f039b338
+  - enabled: 1
+    path: Assets/Art/Scenes - Background/Level 2.unity
+    guid: 339ff7bbffe6a744fa25c342a3081409
   m_configObjects: {}

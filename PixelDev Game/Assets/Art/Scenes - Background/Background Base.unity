@@ -144692,6 +144692,7 @@ GameObject:
   - component: {fileID: 1745335216}
   - component: {fileID: 1745335217}
   - component: {fileID: 1745335218}
+  - component: {fileID: 1745335219}
   m_Layer: 8
   m_Name: Idle01
   m_TagString: Enemy
@@ -144886,6 +144887,18 @@ MonoBehaviour:
   components:
   - {fileID: 1745335216}
   - {fileID: 1745335217}
+--- !u!114 &1745335219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745335208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd47394ff311154ead707b96018df09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1838666044
 GameObject:
   m_ObjectHideFlags: 0
