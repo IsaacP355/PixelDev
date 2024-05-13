@@ -143985,7 +143985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1
-  attackRange: 3
+  attackRange: 2
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
