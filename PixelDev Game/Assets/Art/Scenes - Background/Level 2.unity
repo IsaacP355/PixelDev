@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30444bd113779c48af3134b7e36f7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 1000
+  startingHealth: 2
   components:
   - {fileID: 209956736}
   - {fileID: 209956738}
